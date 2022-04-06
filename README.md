@@ -1,5 +1,3 @@
-# 22s-asiaam-191a-labs
-Spring Quarter - Asia AM 191A Lab
 What social problem is being addressed?
 Academia is entrenched in white, hetero, cisnormativity. Critical scholars with goals of resisting such norms are often met with a number of barriers that challenge the validity and value of their work. Given the exclusionary nature of the academic community, we are motivated to document the counter spaces that have served to uplift scholars of color in their work and wellbeing. For this project, we want to specifically focus on the Research Apprenticeship Courses (RAC) that was started by Dr. Daniel Solorzano at UCLA. More information about the history of RAC can be found here: https://www.tandfonline.com/doi/full/10.1080/09518398.2022.2042613
 
