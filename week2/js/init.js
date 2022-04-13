@@ -23,7 +23,7 @@ function add_marker(lat,lng,popup){
         //.openPopup();
 }
 
-add_marker(37.620720,-105.745941, "Great Sand Dunes National Park<br> Visited in 2021")
+add_marker(37.620720,-105.745941, "Great Sand Dunes National Park<img src={/photos/greatsanddunes.jpeg}></img>")
 add_marker(35.965000,-111.973793, "Grand Canyon National Park<br> Visited in 2021")
 add_marker(38.889271,-77.050179, "Lincoln Memorial<br> Visited in 2017,18, & 20)")
 add_marker(41.213181,-124.004623, "Redwood National & State Parks<br> Visited in 2021")
