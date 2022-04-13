@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"place":"hometown","color":"green"},"geometry":{"type":"Point","coordinates":[-87.94830322265625,43.004647127794435]}},{"type":"Feature","properties":{"place":"school","color":"red"},"geometry":{"type":"Point","coordinates":[-118.24584960937499,34.05265942137599]}}]}
