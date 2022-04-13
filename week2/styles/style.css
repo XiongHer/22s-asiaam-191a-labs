@@ -29,3 +29,6 @@ header{
     height:80vh;
     grid-area: main_map; 
 }
+
+.myimages{max-width:300px;
+    max-height:300px}
