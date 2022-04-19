@@ -5,10 +5,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-addMarker(37,-122,'home','home land!')
-addMarker(32,-118,'work','where i work land!')
-addMarker(39,-119,'location 1','random location')
-addMarker(36,-120,'location 2','another random location')
+addMarker(43.038902,-87.906471,'Hometown','Milwaukee, WI')
+addMarker(46.7208,-92.1041,'Work','Superior, WI')
+addMarker(38.9072,-77.0369,'Internship','Washington D.C')
+addMarker(39.9042,116.4074,'Study Abroad','Beijing, China')
+addMarker(13.7563,100.5018,'Work Abroad','Bangkok, Thailand')
 
 // create a function to add markers
 function addMarker(lat,lng,title,message){
