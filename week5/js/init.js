@@ -21,12 +21,36 @@ function loadData(url){
     Papa.parse(url, {
         header: true,
         download: true,
-        complete: function(results) {
-            console.log(results)
-        }
+        complete: results => {console.log(results)}
     })
 }
 
-
 // we will this later
 loadData(dataUrl)
+
+const sampleDataArray = [[37,-122],[32,-118],[39,-119],[36,-120]]
+
+
+
+// for (let i = 0; i < sampleDataArray.length; i++) {
+//     console.log(i)
+// }
+
+// for(const dataInSample of sampleDataArray)
+//     console.log('hello')
+
+//     console.log(dataInSample)
+
+// const longString = 'hellooooooooooooo'
+// const array1 = ['a', 'b', 'c'];
+
+// // this loops through an array
+// for (const stuff of array1){
+//     console.log(stuff)
+// }
+
+// // this loops through a string!
+// for (const letter in longstring){
+//     console.log(letter)
+// }
+
