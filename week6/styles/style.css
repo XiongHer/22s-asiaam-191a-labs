@@ -1,9 +1,11 @@
 body{
     display: grid;
-    grid-auto-rows: auto 1fr;
+    grid-template-rows: 50px auto auto;
     grid-template-areas: "header" "main_content" "footer";
     background-color: aqua;
+    gap: 10p;
 }
+
 
 header{
     grid-area: header;
@@ -23,6 +25,18 @@ header{
 #contents{
     grid-area: content;
     display: grid;
+    grid-template-rows: 1fr 3fr; 
+    grid-template-areas: "survey" "buttonHome"
+}
+
+#theSurvey{
+    grid-area: survey; 
+}
+
+#placeForButtons{
+    grid-area: buttonHome; 
+    display:grid;
+    grid-template-columns: repeat(2,1fr)
 }
 
 #the_map{
