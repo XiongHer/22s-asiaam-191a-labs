@@ -21,7 +21,7 @@ function loadData(url){
     Papa.parse(url, {
         header: true,
         download: true,
-        complete: results => {console.log(results)}
+        complete: results => processData(results)
     })
 }
 
@@ -29,7 +29,7 @@ function processData(results){
     console.log(results)
     results.data.forEach(data => {
         console.log(data)
-        addMarker(data.lat,data.lng,data["How was your graduate experiences so far at UCLA?"],data["How and where do you find academic and social support?"])
+        addMarker(data.lat,data.lng,data['How was your graduate experiences so far at UCLA?'],data['How and where do you find academic and social support?'])
     })
 }
 
