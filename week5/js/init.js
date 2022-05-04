@@ -15,7 +15,7 @@ function addMarker(lat,lng,title,message){
     return message
 }
 
-const dataUrl= "https://docs.google.com/spreadsheets/d/e/2PACX-1vT0cUDc60RnZpw2in8WgzFq-TNyZvyVQRJmI8lSh4DrONr3SQXQ_DgHK4u_yzPV1SfLutmeNUZ2IEU6/pub?output=csv"
+const dataUrl= "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTk10-kDr-nLH38AgMWkx6KCbePSyQamX3WHKsZDy-N4wRlAuYloD4dEsliqpd_3unE5eTQFuYSzM3/pub?output=csv"
 
 function loadData(url){
     Papa.parse(url, {
@@ -24,6 +24,16 @@ function loadData(url){
         complete: results => {console.log(results)}
     })
 }
+
+function processData(results){
+    console.log(results)
+    results.data.forEach(data => {
+        console.log(data)
+        addMarker(data.lat,data.lng,data['How was your graduate experiences so far at UCLA?'])
+    })
+}
+
+loadData(dataUrl)
 
 // we will this later
 loadData(dataUrl)
