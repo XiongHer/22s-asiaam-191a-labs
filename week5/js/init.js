@@ -29,18 +29,13 @@ function processData(results){
     console.log(results)
     results.data.forEach(data => {
         console.log(data)
-        addMarker(data.lat,data.lng,data['How was your graduate experiences so far at UCLA?'])
+        addMarker(data.lat,data.lng,data["How was your graduate experiences so far at UCLA?"],data["How and where do you find academic and social support?"])
     })
 }
 
 loadData(dataUrl)
 
-// we will this later
-loadData(dataUrl)
-
-const sampleDataArray = [[37,-122],[32,-118],[39,-119],[36,-120]]
-
-
+// const sampleDataArray = [[37,-122],[32,-118],[39,-119],[36,-120]]
 
 // for (let i = 0; i < sampleDataArray.length; i++) {
 //     console.log(i)
@@ -49,7 +44,7 @@ const sampleDataArray = [[37,-122],[32,-118],[39,-119],[36,-120]]
 // for(const dataInSample of sampleDataArray)
 //     console.log('hello')
 
-//     console.log(dataInSample)
+//     // console.log(dataInSample)
 
 // const longString = 'hellooooooooooooo'
 // const array1 = ['a', 'b', 'c'];
