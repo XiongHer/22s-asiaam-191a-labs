@@ -30,7 +30,7 @@ function createButtons(data){
     spaceForButtons.appendChild(newButton);//this adds the button to our page.
 }
 
-const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2WyfKTyZJ-_ja3GGrxoAXwranavyDGXYsxeFUO4nvHpCJrkKhChymXQqUEyhdGLnz9VN6BJv5tOjp/pub?gid=1560504149&single=true&output=csv"
+const dataUrl= "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTk10-kDr-nLH38AgMWkx6KCbePSyQamX3WHKsZDy-N4wRlAuYloD4dEsliqpd_3unE5eTQFuYSzM3/pub?output=csv"
 
 function loadData(url){
     Papa.parse(url, {
@@ -44,7 +44,7 @@ function processData(results){
     console.log(results)
     results.data.forEach(data => {
         console.log(data)
-        addMarker(data)
+        addMarker(data.lat,data.lng,data['How was your graduate experiences so far at UCLA?'],data['How and where do you find academic and social support?'])
     })
 }
 
