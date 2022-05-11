@@ -12,7 +12,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function addMarker(data){
     console.log(data)
     L.marker([data.lat,data.lng]).addTo(map).bindPopup(`<h2>${data['How was your graduate experiences so far at UCLA?']}</h2> <h3>${data['How and where do you find academic and social support?']}</h3>`)
-    createButtons(data.lat,data.lng,data ['Location'])
+    createButtons(data.lat,data.lng,data['Location'])
     return 
 }
 
@@ -43,7 +43,7 @@ function processData(results){
     console.log(results)
     results.data.forEach(data => {
         console.log(data)
-        addMarker(data)
+        addMarker(data.lat,data.lng,data['Location'])
     })
 }
 
