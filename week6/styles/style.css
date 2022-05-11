@@ -2,13 +2,14 @@ body{
     display: grid;
     grid-template-rows: 50px auto auto;
     grid-template-areas: "header" "main_content" "footer";
-    background-color: aqua;
+    background-color: rgb(62, 104, 104);
     gap: 10p;
 }
 
-
 header{
     grid-area: header;
+    justify-self: center;
+    align-self: center;
 }
 
 #footer{

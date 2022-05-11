@@ -11,8 +11,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // create a function to add markers
 function addMarker(data){
     console.log(data)
-    L.marker([data.lat,data.lng]).addTo(map).bindPopup(`<h2> <h3>Is English your first langage? ${data.Location}</h2> <h3>${data.OpenEnded}</h3>`)
-    createButtons(data)
+    L.marker([data.lat,data.lng]).addTo(map).bindPopup(`<h2>${data.Location}</h2> <h3>${data.OpenEnded}</h3>`)
+    createButtons(data.lat,data.lng.data ['Location'])
     return 
 }
 
