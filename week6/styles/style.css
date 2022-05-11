@@ -27,7 +27,12 @@ header{
     grid-area: content;
     display: grid;
     grid-template-rows: 1fr 3fr; 
-    grid-template-areas: "survey" "buttonHome"
+    grid-template-areas: "buttonHome" "survey"
+}
+
+#the_map{
+    height:80vh;
+    grid-area: main_map;
 }
 
 #theSurvey{
@@ -40,7 +45,3 @@ header{
     grid-template-columns: repeat(2,1fr)
 }
 
-#the_map{
-    height:80vh;
-    grid-area: main_map;
-}
