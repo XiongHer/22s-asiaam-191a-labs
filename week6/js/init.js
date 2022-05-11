@@ -1,5 +1,5 @@
 // declare variables
-let mapOptions = {'center': [34.0709,-118.444],'zoom':5}
+let mapOptions = {'center': [34.0709,-118.444],'zoom':10}
 
 // use the variables
 const map = L.map('the_map').setView(mapOptions.center, mapOptions.zoom);
@@ -25,7 +25,7 @@ function createButtons(lat,lng,title){
     newButton.addEventListener('click', function(){
         map.flyTo([lat,lng]); //this is the flyTo from Leaflet
     })
-    const placeForButtons = document.getElementById('placeForButtons')
+    const spaceForButtons = document.getElementById('placeForButtons')
     spaceForButtons.appendChild(newButton);//this adds the button to our page.
 }
 
