@@ -3,7 +3,7 @@ body{
     grid-template-rows: 50px auto auto;
     grid-template-areas: "header" "main_content" "footer";
     background-color: aqua;
-    gap: 10px;
+    gap: 80px;
 }
 
 header{
@@ -26,7 +26,7 @@ header{
 #contents{
     grid-area: content;
     display: grid;
-    grid-template-rows: 3fr 1fr; 
+    grid-template-rows: 1fr 3fr; 
     grid-template-areas: "buttonHome" "survey"
 }
 
