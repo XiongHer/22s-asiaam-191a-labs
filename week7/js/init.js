@@ -18,7 +18,7 @@ let circleOptions = {
     fillOpacity: 0.8
 }
 
-const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2WyfKTyZJ-_ja3GGrxoAXwranavyDGXYsxeFUO4nvHpCJrkKhChymXQqUEyhdGLnz9VN6BJv5tOjp/pub?gid=1560504149&single=true&output=csv"
+const dataUrl= "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTk10-kDr-nLH38AgMWkx6KCbePSyQamX3WHKsZDy-N4wRlAuYloD4dEsliqpd_3unE5eTQFuYSzM3/pub?output=csv"
 
 // define the leaflet map
 const map = L.map('the_map').setView(mapOptions.center, mapOptions.zoom);
@@ -31,14 +31,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 function addMarker(data){
-    if(data['Is your English your first language?'] == "Yes"){
+    if(data['Are you a graduate student?'] == "Yes"){
         circleOptions.fillColor = "red"
-        englishFirst.addLayer(L.circleMarker([data.lat,data.lng],circleOptions).bindPopup(`<h2>English First Language</h2>`))
+        graduatestudent.addLayer(L.circleMarker([data.lat,data.lng],circleOptions).bindPopup(`<h2>Graduate Student</h2>`))
         createButtons(data.lat,data.lng,data.Location)
         }
     else{
         circleOptions.fillColor = "blue"
-        nonEnglishFirst.addLayer(L.circleMarker([data.lat,data.lng],circleOptions).bindPopup(`<h2>Non-English First Language</h2>`))
+        notgraduatestudent.addLayer(L.circleMarker([data.lat,data.lng],circleOptions).bindPopup(`<h2>Not Graduate Student</h2>`))
         createButtons(data.lat,data.lng,data.Location)
     }
     return data
