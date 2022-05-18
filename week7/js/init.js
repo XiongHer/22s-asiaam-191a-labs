@@ -1,12 +1,12 @@
 // declare variables
 let mapOptions = {'center': [34.0709,-118.444],'zoom':5}
 
-let englishFirst = L.featureGroup();
-let nonEnglishFirst = L.featureGroup();
+let graduatestudent = L.featureGroup();
+let notgraduatestudent = L.featureGroup();
 
 let layers = {
-    "Speaks English First": englishFirst,
-    "Doesn't Speak English First": nonEnglishFirst
+    "Graduate Student": graduatestudent,
+    "Not Graduate Student": notgraduatestudent
 }
 
 let circleOptions = {
@@ -23,23 +23,29 @@ const dataUrl= "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTk10-kDr-nLH38
 // define the leaflet map
 const map = L.map('the_map').setView(mapOptions.center, mapOptions.zoom);
 
+let Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+	maxZoom: 16
+});
+Esri_NatGeoWorldMap.addTo(map)
+
 // add layer control box
 L.control.layers(null,layers).addTo(map)
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// }).addTo(map);
 
 function addMarker(data){
     if(data['Are you a graduate student?'] == "Yes"){
         circleOptions.fillColor = "red"
         graduatestudent.addLayer(L.circleMarker([data.lat,data.lng],circleOptions).bindPopup(`<h2>Graduate Student</h2>`))
-        createButtons(data.lat,data.lng,data.Location)
+        createButtons(data.lat,data.lng,data['Are you a graduate student?'])
         }
     else{
         circleOptions.fillColor = "blue"
         notgraduatestudent.addLayer(L.circleMarker([data.lat,data.lng],circleOptions).bindPopup(`<h2>Not Graduate Student</h2>`))
-        createButtons(data.lat,data.lng,data.Location)
+        createButtons(data.lat,data.lng,data['Are you a graduate student?'])
     }
     return data
 }
@@ -71,9 +77,9 @@ function processData(results){
         console.log(data)
         addMarker(data)
     })
-    englishFirst.addTo(map) // add our layers after markers have been made
-    nonEnglishFirst.addTo(map) // add our layers after markers have been made  
-    let allLayers = L.featureGroup([englishFirst,nonEnglishFirst]);
+    graduatestudent.addTo(map) // add our layers after markers have been made
+    notgraduatestudent.addTo(map) // add our layers after markers have been made  
+    let allLayers = L.featureGroup([graduatestudent,notgraduatestudent]);
     map.fitBounds(allLayers.getBounds());
 }
 
