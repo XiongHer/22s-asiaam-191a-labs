@@ -1,0 +1,28 @@
+body{
+    font-family: Trebuchet MS, sans-serif;
+    display: grid;
+    grid-auto-rows: auto auto auto;
+    grid-template-areas: "header" "main_content" "footer";
+    background-color: #faf4c1;
+    gap: 10px;
+}
+
+header{
+    grid-area: header;
+    justify-self: center;
+    align-self: auto;
+    display: grid;
+}
+
+#footer{
+    grid-area: footer;
+}
+
+.main{
+    grid-area: main_content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "main_map content";
+    display: grid;
+    gap:10px;
+}

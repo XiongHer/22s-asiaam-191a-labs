@@ -1,0 +1,73 @@
+body{
+    font-family: Trebuchet MS, sans-serif;
+    display: grid;
+    grid-auto-rows: auto auto auto;
+    grid-template-areas: "header" "main_content" "footer";
+    background-color: #faf4c1;
+    gap: 10px;
+}
+
+header{
+    grid-area: header;
+    justify-self: center;
+    align-self: auto;
+    display: grid;
+}
+
+/* #menu{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+#footer{
+    grid-area: footer;
+}
+
+.main{
+    grid-area: main_content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "main_map content" "buttonHome buttonHome";
+    display: grid;
+    gap:10px;
+}
+
+#contents{
+    grid-area: content;
+    display: grid;
+    grid-template-rows: 3fr;
+    grid-template-areas: "survey"
+}
+
+#the_map{
+    height:50vh;
+    grid-area: main_map;
+}
+
+#theSurvey{
+    grid-area: survey; /* (1)! */
+}
+
+#surveyButton{
+    padding: 15px 32px;
+    margin: 10px;
+    background-color: #97c2ee;
+    cursor: pointer;
+}
+
+#surveyButton a{
+    text-decoration: none; 
+}
+
+#placeForButtons{
+    grid-area: buttonHome;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+}
+
+#wordcloud{
+    display:grid;
+    justify-items: center;
+}
+
